@@ -1,0 +1,50 @@
+{
+  "name": "ckk_front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "5.0.0-alpha.32",
+    "@material-ui/data-grid": "^4.0.0-alpha.21",
+    "@material-ui/docs": "5.0.0-alpha.31",
+    "@material-ui/icons": "5.0.0-alpha.29",
+    "@material-ui/lab": "5.0.0-alpha.32",
+    "@material-ui/styled-engine": "5.0.0-alpha.26",
+    "@material-ui/styled-engine-sc": "5.0.0-alpha.26",
+    "@material-ui/styles": "5.0.0-alpha.32",
+    "@material-ui/system": "5.0.0-alpha.31",
+    "@material-ui/types": "6.0.0",
+    "@material-ui/unstyled": "5.0.0-alpha.32",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
