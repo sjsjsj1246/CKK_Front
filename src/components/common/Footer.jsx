@@ -24,15 +24,9 @@ const Footer = () => {
   const md = useMediaQuery('(max-width: 959px)');
 
   return (
-    <Container component="footer" maxWidth="lg">
-      <Grid
-        container
-        spacing={4}
-        justifyContent="center"
-        p={[0, 4, 4, 2]}
-        sx={{ marginTop: '3rem' }}
-      >
-        <Grid item container xs={6} md={4} flexDirection="column">
+    <Container component="footer" maxWidth="lg" sx={{ margin: '3rem 0' }}>
+      <Grid container spacing={4} justifyContent="center" p={[0, 4, 4, 2]}>
+        <Grid item container xs={12} md={4} flexDirection="column">
           {siteMaps.map((site) => (
             <Grid sx={{ textAlign: 'center', '&+&': { marginTop: '1rem' } }}>
               <Link
@@ -48,7 +42,7 @@ const Footer = () => {
             </Grid>
           ))}
         </Grid>
-        <Grid item container xs={6} md={4} flexDirection="column">
+        <Grid item container xs={12} md={4} flexDirection="column">
           {sections.map((section) => (
             <Grid sx={{ textAlign: 'center', '&+&': { marginTop: '1rem' } }}>
               <Link
