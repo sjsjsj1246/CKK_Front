@@ -46,21 +46,17 @@ const FeaturePost = () => (
 
 const Main = (props) => {
   return (
-    <>
-      <Header />
-      <Container maxWidth="lg">
-        <MainBanner
-          title="Code King Kong"
-          url="https://static.rogerebert.com/uploads/blog_post/primary_image/features/a-guide-to-monkey-business-the-history-of-king-kong/rev-1-GVK-FP-0002_High_Res_JPEG.jpg"
-        />
-        <Grid container spacing={12} p={8}>
-          {[1, 3, 4].map(() => (
-            <FeaturePost />
-          ))}
-        </Grid>
-      </Container>
-      <Footer />
-    </>
+    <Container maxWidth="lg">
+      <MainBanner
+        title="Code King Kong"
+        url="https://static.rogerebert.com/uploads/blog_post/primary_image/features/a-guide-to-monkey-business-the-history-of-king-kong/rev-1-GVK-FP-0002_High_Res_JPEG.jpg"
+      />
+      <Grid container spacing={12} p={8}>
+        {[1, 3, 4].map(() => (
+          <FeaturePost />
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

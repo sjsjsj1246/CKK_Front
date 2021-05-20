@@ -1,13 +1,15 @@
+/** @jsxImportSource @emotion/react */
+import { jsx, css } from '@emotion/react';
 import * as React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { Grid, Toolbar, useMediaQuery } from '@material-ui/core';
 import palette from '../../lib/styles/palette';
+import { Link } from 'react-router-dom';
 
 const siteMaps = [
-  { title: '문제', url: '#' },
+  { title: '문제', url: '/problem_list' },
   { title: '채점현황', url: '#' },
 ];
 
@@ -28,30 +30,49 @@ const Footer = () => {
         spacing={4}
         justifyContent="center"
         p={[0, 4, 4, 2]}
-        sx={{ borderTop: `1.5px solid ${palette.gray[4]}` }}
+        sx={{ marginTop: '3rem' }}
       >
         <Grid item container xs={6} md={4} flexDirection="column">
           {siteMaps.map((site) => (
             <Grid sx={{ textAlign: 'center', '&+&': { marginTop: '1rem' } }}>
-              {site.title}
+              <Link
+                to={site.url}
+                css={{
+                  fontSize: '0.9rem',
+                  color: `${palette.gray[7]}`,
+                  '&:hover': { color: `${palette.green.highBold}` },
+                }}
+              >
+                {site.title}
+              </Link>
             </Grid>
           ))}
         </Grid>
         <Grid item container xs={6} md={4} flexDirection="column">
           {sections.map((section) => (
             <Grid sx={{ textAlign: 'center', '&+&': { marginTop: '1rem' } }}>
-              {section.title}
+              <Link
+                css={{
+                  fontSize: '0.9rem',
+                  color: `${palette.gray[7]}`,
+                  '&:hover': { color: `${palette.green.highBold}` },
+                }}
+                to={section.url}
+              >
+                {section.title}
+              </Link>
             </Grid>
           ))}
         </Grid>
         {!md && (
           <Grid item container xs={12} md={4} justifyContent="center">
             <img
-              src="https://compote.slate.com/images/d5c86479-001d-4e9c-8bdd-59a8c7a96358.jpg"
+              src="https://avatars.githubusercontent.com/u/84124950?s=200&v=4"
               alt="logo"
               style={{
                 width: '9rem',
                 height: '9rem',
+                borderRadius: '5px',
               }}
             />
           </Grid>
@@ -59,7 +80,7 @@ const Footer = () => {
       </Grid>
       <Typography variant="body2" color="text.secondary" align="center">
         {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
+        <Link color="inherit" to="/">
           CodeKingKong
         </Link>{' '}
         {new Date().getFullYear()}

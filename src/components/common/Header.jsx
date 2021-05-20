@@ -17,7 +17,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 import palette from '../../lib/styles/palette';
 
 const sections = [
-  { title: '문제', url: '#' },
+  { title: '문제', url: '/problem_list' },
   { title: '채점 현황', url: '#' },
 ];
 const SectionWrapper = styled(Box)`
@@ -40,22 +40,21 @@ const Header = (props) => {
           <Avatar src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F121A9F344D1AD6CE2A" />
         </Link>
         {!isMobile && (
-          <Link>
+          <Link to="/">
             <Typography
               fontSize="1.5rem"
               ml={1}
               mr={1}
               sx={{ whiteSpace: 'nowrap' }}
-              color={palette.green.highBold}
             >
-              CKK
+              C<span style={{ color: `${palette.green.highBold}` }}>KK</span>
             </Typography>
           </Link>
         )}
         <SectionWrapper>
           {sections.map((section) => (
             <Link
-              to={`/${section.url}`}
+              to={section.url}
               key={section.title}
               style={{
                 display: 'flex',
@@ -78,7 +77,7 @@ const Header = (props) => {
           <PersonIcon />
         </IconButton>
         <Typography>sjsjsj1246</Typography>
-        <Link to="/signup">
+        <Link to="/login">
           <Button
             size="mall"
             color="inherit"
@@ -88,7 +87,7 @@ const Header = (props) => {
               whiteSpace: 'nowrap',
             }}
           >
-            Sign up
+            LOG IN
           </Button>
         </Link>
       </Toolbar>

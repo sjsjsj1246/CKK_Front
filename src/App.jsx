@@ -1,7 +1,11 @@
 import { GlobalStyles } from '@material-ui/core';
 import { Route } from 'react-router';
 import './App.css';
-import Main from './components/common/Main';
+import Login from './components/auth/Login';
+import Signup from './components/auth/Signup';
+import ProblemList from './components/problems/ProductList';
+import MainPage from './pages/MainPage';
+import ProblemListPage from './pages/ProblemListPage';
 
 function App() {
   return (
@@ -14,7 +18,10 @@ function App() {
           },
         }}
       />
-      <Route path="/" exact component={Main} />
+      <Route path="/" exact component={MainPage} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/problem_list" component={ProblemListPage} />
     </>
   );
 }
